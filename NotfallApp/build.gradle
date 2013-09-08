@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.5.+'
+    }
+}
+apply plugin: 'android'
+
+dependencies {
+    compile project(':libraries:ActionBarSherlock:actionbarsherlock')
+    compile project(':libraries:WizardPager:LibWizardPager')
+    compile 'com.android.support:support-v4:13.0.0'
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 17
+    }
+}
