@@ -3,23 +3,27 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.6.+'
+        classpath 'com.android.tools.build:gradle:0.6.3'
     }
 }
 apply plugin: 'android'
 
-dependencies {
-    compile project(':libraries:ActionBarSherlock:actionbarsherlock')
-    compile project(':libraries:WizardPager:LibWizardPager')
-    compile 'com.android.support:support-v4:13.0.0'
+repositories {
+    mavenCentral()
 }
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion "17.0.0"
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
 
     defaultConfig {
         minSdkVersion 8
-        targetSdkVersion 17
+        targetSdkVersion 19
     }
+}
+
+dependencies {
+    compile project(':libraries:ActionBarSherlock:actionbarsherlock')
+    compile project(':libraries:WizardPager:LibWizardPager')
+    compile 'com.android.support:support-v4:19.0.0'
 }

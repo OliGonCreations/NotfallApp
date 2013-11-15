@@ -46,7 +46,6 @@ public class ActivityNumbers extends SherlockListActivity {
         }
         adapter = new CustomAdapter(this, strings, images, numbers);
         setListAdapter(adapter);
-
     }
 
     @Override
@@ -79,6 +78,7 @@ public class ActivityNumbers extends SherlockListActivity {
         startActivity(intent);
         super.onListItemClick(l, v, position, id);
     }
+
 
     private static class CustomAdapter extends BaseAdapter {
 
@@ -114,11 +114,11 @@ public class ActivityNumbers extends SherlockListActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View view = convertView;
             if (convertView == null)
-                view = inflater.inflate(R.layout.list_row, null);
+                view = inflater.inflate(android.R.layout.list_row, null);
 
-            TextView text = (TextView) view.findViewById(R.id.list_text);
-            TextView number = (TextView) view.findViewById(R.id.list_number);
-            ImageView image = (ImageView) view.findViewById(R.id.list_image);
+            TextView text = (TextView) view.findViewById(android.R.id.list_text);
+            TextView number = (TextView) view.findViewById(android.R.id.list_number);
+            ImageView image = (ImageView) view.findViewById(android.R.id.list_image);
             text.setText(strings.get(position));
             number.setText(numbers.get(position));
             image.setImageDrawable(images.get(position));
