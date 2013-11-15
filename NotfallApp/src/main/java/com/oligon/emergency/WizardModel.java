@@ -53,6 +53,7 @@ public class WizardModel extends AbstractWizardModel implements SingleFixedChoic
                 new ContentPage(this, "Notruf tätigen"),
                 new ContentPage(this, "Weitere Maßnahmen"),
                 new ContentPage(this, "Notarzt"))
+        .addBranch("Notruf tätigen")
         .setRequired(true));
     }
 

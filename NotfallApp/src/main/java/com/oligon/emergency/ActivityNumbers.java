@@ -72,7 +72,7 @@ public class ActivityNumbers extends SherlockListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        Toast.makeText(this, "Rufe " + adapter.getNumber(position) + " an.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Bestätigen.", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:" + adapter.getNumber(position).trim()));
         startActivity(intent);
@@ -114,11 +114,11 @@ public class ActivityNumbers extends SherlockListActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View view = convertView;
             if (convertView == null)
-                view = inflater.inflate(android.R.layout.list_row, null);
+                view = inflater.inflate(R.layout.list_row, null);
 
-            TextView text = (TextView) view.findViewById(android.R.id.list_text);
-            TextView number = (TextView) view.findViewById(android.R.id.list_number);
-            ImageView image = (ImageView) view.findViewById(android.R.id.list_image);
+            TextView text = (TextView) view.findViewById(R.id.list_text);
+            TextView number = (TextView) view.findViewById(R.id.list_number);
+            ImageView image = (ImageView) view.findViewById(R.id.list_image);
             text.setText(strings.get(position));
             number.setText(numbers.get(position));
             image.setImageDrawable(images.get(position));

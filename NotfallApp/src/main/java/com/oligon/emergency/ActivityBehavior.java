@@ -278,9 +278,6 @@ public class ActivityBehavior extends SherlockFragmentActivity implements PageFr
 
         @Override
         public Fragment getItem(int i) {
-            if (i == 1) {
-                return mCurrentPageSequence.get(i).createFragment();
-            }
             if (i >= mCurrentPageSequence.size()) {
                 return new ReviewFragment();
             }
